@@ -3,4 +3,10 @@
     <string name="button_start">Start test</string>
     <string name="button_Instruction">Instruction</string>
     <string name="image_text">Logica</string>
+    <string name="tool_text_for_question">"Шмурдик боится как мышей, так и тараканов."</string>
+    <string name="first_answer">шмурдик не боится тараканов</string>
+    <string name="two_answer">шмурдик боится мышей</string>
+    <string name="three_answer">шмурдик боится мышей больше, чем тараканов, но и тараканов боится тоже</string>
+    <string name="submit_game">submit</string>
+    <string name="title_game">Вопросы</string>
 </resources>
