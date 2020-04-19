@@ -7,7 +7,7 @@
 
         <variable
             name="game"
-            type="com.example.android.logictestproject.GameFragment" />
+            type="com.example.android.logictestproject.Data" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +16,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/start_button2"
+            android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -43,7 +43,7 @@
             android:layout_marginEnd="16dp"
             android:background="#504848"
             android:padding="16dp"
-            android:text="TextView"
+            android:text="@{game.currentQuestion.text}"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -56,11 +56,9 @@
 
         <RadioGroup
             android:id="@+id/questionRadioGroup"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="100dp"
-            android:layout_marginEnd="16dp"
             android:background="#2C2B2B"
             android:padding="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -74,7 +72,9 @@
                 android:id="@+id/firstAnswerRadioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton"
+                android:layout_margin="6dp"
+                android:text="@{game.answers[0]}"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 tools:text="@string/first_answer" />
 
@@ -82,7 +82,9 @@
                 android:id="@+id/secondAnswerRadioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton"
+                android:layout_margin="6dp"
+                android:text="@{game.answers[1]}"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 tools:text="@string/two_answer" />
 
@@ -90,7 +92,9 @@
                 android:id="@+id/thirdAnswerRadioButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton"
+                android:layout_margin="6dp"
+                android:text="@{game.answers[2]}"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 tools:text="@string/three_answer" />
         </RadioGroup>

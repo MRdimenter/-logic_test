@@ -6,5 +6,21 @@
     <fragment
         android:id="@+id/titleFragment"
         android:name="com.example.android.logictestproject.TitleFragment"
-        android:label="TitleFragment" />
+        android:label="TitleFragment" >
+        <action
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.android.logictestproject.GameFragment"
+        android:label="GameFragment" >
+        <action
+            android:id="@+id/action_gameFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.android.logictestproject.ResultFragment"
+        android:label="ResultFragment" />
 </navigation>
