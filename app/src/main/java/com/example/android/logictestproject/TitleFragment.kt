@@ -16,7 +16,8 @@ class TitleFragment : Fragment() {
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater, R.layout.fragment_title, container, false)
         
         binding.startButton.setOnClickListener { v: View ->  v.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)} //listener для перехода на другой фрагмент
-        
+
+        binding.InstructionButton.setOnClickListener { v: View -> v.findNavController().navigate(R.id.action_titleFragment_to_instructionFragment)  }
         return binding.root
         
         

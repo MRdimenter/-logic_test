@@ -10,6 +10,9 @@
         <action
             android:id="@+id/action_titleFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_titleFragment_to_instructionFragment"
+            app:destination="@id/instructionFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -28,4 +31,8 @@
             android:name="correctAnswers"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="com.example.android.logictestproject.InstructionFragment"
+        android:label="InstructionFragment" />
 </navigation>
