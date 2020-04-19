@@ -17,7 +17,8 @@
         android:label="GameFragment" >
         <action
             android:id="@+id/action_gameFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/titleFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
