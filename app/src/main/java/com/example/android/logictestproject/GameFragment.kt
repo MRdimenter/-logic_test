@@ -20,14 +20,11 @@ class GameFragment : Fragment() {
 
         binding.game = data
 
-        //data.randomizeQuestions()
+
         data.setQuestion()
         var count: Int = 0
         binding.submitButton.setOnClickListener { v: View ->
-
                 val checkedId = binding.questionRadioGroup.checkedRadioButtonId
-
-
                 if (-1 != checkedId) {
                     if (count <= 9) {
                     var answerIndex = 0 //выбор игрока
@@ -36,15 +33,11 @@ class GameFragment : Fragment() {
                         R.id.thirdAnswerRadioButton -> answerIndex = 2
                     }
                     //первый ответ в ихсодном вопросе всегда правильный, поэтому если наш ответ совпадает, у нас правильный ответ
-
                     if (data.answers[answerIndex] == data.currentQuestion.answers[0]) {
                         data.correctAnswer++
                         println(data.correctAnswer)
                         // Переход к следующему вопросу
                     }
-
-
-
                     data.questionIndex++
                     data.currentQuestion = data.questions[data.questionIndex]
                     data.setQuestion()
@@ -54,11 +47,6 @@ class GameFragment : Fragment() {
                     count++
                     }else  v.findNavController().navigate(R.id.action_gameFragment_to_resultFragment)
                 }
-
-
-
-
-
         }
         return binding.root
     }

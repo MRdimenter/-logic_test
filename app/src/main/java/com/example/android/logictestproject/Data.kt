@@ -59,10 +59,11 @@ class Data {
 
     }
 
-    //рандомизировать вопросы и задать первый вопрос
-    fun randomizeQuestions() {
-        questions.shuffle()
-        questionIndex = 0
-        setQuestion()
+
+
+   fun  setTitleQuestion(): String {
+        var index = questionIndex;
+        Integer.toString(index++)
+        return "Вопрос $index / ${questions.size - 1}"
     }
 }
