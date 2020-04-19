@@ -15,9 +15,7 @@ class GameFragment : Fragment() {
     var data = Data()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
         val binding = DataBindingUtil.inflate<FragmentGameBinding>(inflater, R.layout.fragment_game, container, false)
-
         binding.game = data
 
 
@@ -45,7 +43,7 @@ class GameFragment : Fragment() {
                     binding.questionRadioGroup.clearCheck()
                     binding.invalidateAll()
                     count++
-                    }else  v.findNavController().navigate(R.id.action_gameFragment_to_resultFragment)
+                    }else  v.findNavController().navigate(GameFragmentDirections.actionGameFragmentToResultFragment(data.correctAnswer))
                 }
         }
         return binding.root
