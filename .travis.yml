@@ -9,6 +9,10 @@ env:
     # install timeout in minutes (2 minutes by default)
     - ADB_INSTALL_TIMEOUT=8
 
+
+script:
+  - chmod +x ./gradlew build connectedCheck
+
 sudo: false
 
 notifications:
