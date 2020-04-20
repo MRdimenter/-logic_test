@@ -24,7 +24,7 @@ class GameFragment : Fragment() {
         binding.submitButton.setOnClickListener { v: View ->
                 val checkedId = binding.questionRadioGroup.checkedRadioButtonId
                 if (-1 != checkedId) {
-                    if (count <= 9) {
+                    if (count <= 29) {
                     var answerIndex = 0 //выбор игрока
                     when (checkedId) {
                         R.id.secondAnswerRadioButton -> answerIndex = 1
