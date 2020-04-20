@@ -1,6 +1,10 @@
 package com.example.android.logictestproject
 
 class Data {
+    data class Question(val text:String,  val answers: List<String>) {
+
+    }
+
     val questions: MutableList<Question> = mutableListOf(
         Question(
             text = "Шмурдик боится как мышей, так и тараканов",
@@ -99,33 +103,4 @@ class Data {
 
 
     )
-
-    lateinit var currentQuestion: Question //текущий вопрос
-    lateinit var answers: MutableList<String> //ответы
-    var questionIndex = 0 //индекс вопроса
-    val numQuestions = Math.min((questions.size + 1) / 2, 3)
-    var correctAnswer = 0 //правильные ответы
-
-    fun startAlg() {
-        currentQuestion = questions[questionIndex]
-        answers = currentQuestion.answers.toMutableList()
-    }
-
-    //устанавливает вопрос и рандомизирует ответы, меняет данные, а не пользовательский интерфейс
-    fun setQuestion() {
-        currentQuestion = questions[questionIndex]
-        // randomize the answers into a copy of the array
-        answers = currentQuestion.answers.toMutableList()
-        // and shuffle them
-        answers.shuffle()
-
-    }
-
-
-    //визуализация числа вопросов
-    fun setTitleQuestion(): String {
-        var index = questionIndex;
-        Integer.toString(index++)
-        return "Вопрос $index / ${questions.size}"
-    }
 }
