@@ -1,0 +1,19 @@
+language: android
+android:
+  components:
+    - android-28
+    - build-tools-27.0.3
+
+env:
+  global:
+    # install timeout in minutes (2 minutes by default)
+    - ADB_INSTALL_TIMEOUT=8
+
+sudo: false
+
+notifications:
+  email:
+    recipients:
+      - mr.dimenter@gmail.com
+    on_success: always
+    on_failure: always
