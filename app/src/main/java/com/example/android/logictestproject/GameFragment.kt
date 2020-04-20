@@ -12,14 +12,14 @@ import com.example.android.logictestproject.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
 
-    var model = Model()
+    var data = Model()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentGameBinding>(inflater, R.layout.fragment_game, container, false)
-        binding.game = model
+        binding.game = data
 
 
-        model.setQuestion()
+        data.setQuestion()
         var count: Int = 0
         binding.submitButton.setOnClickListener { v: View ->
                 val checkedId = binding.questionRadioGroup.checkedRadioButtonId
@@ -31,19 +31,19 @@ class GameFragment : Fragment() {
                         R.id.thirdAnswerRadioButton -> answerIndex = 2
                     }
                     //первый ответ в ихсодном вопросе всегда правильный, поэтому если наш ответ совпадает, у нас правильный ответ
-                    if (model.answers[answerIndex] == model.currentQuestion.answers[0]) {
-                        model.correctAnswer++
-                        println(model.correctAnswer)
+                    if (data.answers[answerIndex] == data.currentQuestion.answers[0]) {
+                        data.correctAnswer++
+                        println(data.correctAnswer)
                         // Переход к следующему вопросу
                     }
-                    model.questionIndex++
-                    model.currentQuestion = model.questions[model.questionIndex]
-                    model.setQuestion()
+                    data.questionIndex++
+                    data.currentQuestion = data.questions[data.questionIndex]
+                    data.setQuestion()
 
                     binding.questionRadioGroup.clearCheck()
                     binding.invalidateAll()
                     count++
-                    }else  v.findNavController().navigate(GameFragmentDirections.actionGameFragmentToResultFragment(model.correctAnswer))
+                    }else  v.findNavController().navigate(GameFragmentDirections.actionGameFragmentToResultFragment(data.correctAnswer))
                 }
         }
         return binding.root

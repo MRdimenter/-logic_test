@@ -1,7 +1,7 @@
 package com.example.android.logictestproject
 
 class Data {
-    data class Question(val text:String,  val answers: List<String>) {
+    data class Question(val text: String, val answers: List<String>) {
 
     }
 

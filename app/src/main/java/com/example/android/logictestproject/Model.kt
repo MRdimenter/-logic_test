@@ -10,7 +10,6 @@ class Model {
     var correctAnswer = 0 //правильные ответы
 
 
-
     //устанавливает вопрос и рандомизирует ответы, меняет данные, а не пользовательский интерфейс
     fun setQuestion() {
         currentQuestion = questions[questionIndex]
