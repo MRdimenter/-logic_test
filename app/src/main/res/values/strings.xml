@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LogicTestProject</string>
+    <string name="app_name">Тест на логику</string>
     <string name="button_start">Start test</string>
     <string name="button_Instruction">Instruction</string>
     <string name="image_text">Logica</string>
