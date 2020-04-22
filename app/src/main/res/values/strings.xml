@@ -24,4 +24,7 @@
     <string name="title_value_main">Тест на логическое мышление</string>
 
     <string name="name_activity_file">Главное меню</string>
+    <string name="about_application">О приложении</string>
+    <string name="about_title_me">Был разработан с целью обучения основных компонент Андройда. </string>
+    <string name="me_github">github.com/MRdimenter</string>
 </resources>

@@ -35,4 +35,8 @@
         android:id="@+id/instructionFragment"
         android:name="com.example.android.logictestproject.InstructionFragment"
         android:label="InstructionFragment" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.android.logictestproject.AboutFragment"
+        android:label="AboutFragment" />
 </navigation>
